@@ -1,0 +1,247 @@
+.container{
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    justify-content: space-between;
+    border-radius: 0.6rem;
+    top: -6rem;
+    margin: 2.4rem;
+    gap: 0rem;
+    &.light{
+        background-color: #FFFFFF;
+    }
+    &.dark{
+        background-color: #19202D;
+    }
+}
+
+.inputText{
+    width: 60%;
+    border: none;
+    color: #19202D;
+    font-size: 1.6rem;
+    font-family: Kumbh Sans;
+    &.dark{
+        background-color: #19202D;
+        color: #FFF;;
+    }
+}
+
+.hideFilters{
+    display: none;
+}
+
+///modal menu
+.modalMoreFilters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.moreFilters{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    margin: 0rem 2.4rem;
+    width: 100%;
+    position: relative;
+    border-radius: 0.6rem;
+    &.dark{
+        background-color: #19202D;
+    }
+}
+
+.container2{
+    padding: 2.4rem;
+}
+
+.location{
+    height: 7.2rem;
+    color: #19202D;
+    font-size: 1.6rem;
+    font-family: Kumbh Sans;
+    opacity: 0.5;
+    padding: 2.4rem 2.4rem 2.4rem 5.5rem;
+    border: 0rem;
+    border-bottom: 0.1rem solid #6E8098;
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+    width: 100%;
+    &.dark{
+        background-color: #19202D;
+        color: #FFF;
+        opacity: 1;
+    }
+}
+
+.moreFilters::before{
+    content: url('../../assets/desktop/icon-location.svg');
+    display:block;
+    width: 1rem;
+    height: 1rem;
+    position:absolute;
+    left: 2.5rem;
+    top: 2rem;
+    z-index: 3;
+}
+
+.labelCheck{
+    margin: 20rem 0rem;
+    color: #19202D;
+    font-size: 1.6rem;
+    font-family: Kumbh Sans;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &.dark{
+        color: #FFFFFF;
+    }
+}
+
+.labelCheck::after{
+    content: 'Full Time Only';
+}
+
+.checkbox{
+    appearance: none;    
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.3rem;
+    background-color: #F4F6F8;
+    margin-right: 1.6rem;
+    &.dark{
+        background-color: #313743;
+    }
+}
+
+.checkbox:checked{
+    background-color: #5964E0;
+    background-image: url('../../assets/desktop/icon-check.svg');
+    background-size: 100% 100%;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        padding: 0rem;
+        display: grid;
+        grid-template-columns: 34% 66%;
+        grid-template-rows: auto;
+    }
+
+    .inputText{
+        width: auto;
+        padding-left: 6rem;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        border-right: 0.1rem solid rgba(110, 128, 152, 0.2);
+        opacity: 1;
+    }
+
+    .container::before{
+        content: url('../../assets/desktop/icon-search.svg');
+        position: absolute;
+        left: 2.4rem;
+        top: 3rem;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0rem;
+    }
+
+    .moreFilters, .hideFilters{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .location{
+        padding-left: 5rem;
+        opacity: 1;
+        width: 45%;
+        height: 100%;
+        border-bottom: 0rem;
+        border-radius: 0rem;
+    }
+
+
+    .moreFilters::before, .hideFilters:nth-child(1)::before{
+        content: url('../../assets/desktop/icon-location.svg');
+        left: 35%;
+        top: 2.7rem;
+        position: absolute;
+    }
+
+    .labelCheck{
+        margin: 0rem;
+        padding-left: 2rem;
+        width: 55%;
+        border-left: 0.1rem solid rgba(110, 128, 152, 0.2);
+    }
+
+    .labelCheck::after{
+        content: 'Full Time';
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        max-width: 111rem;
+        margin: auto;
+        top: -4rem;
+        grid-template-columns: 42% 58%;
+    }
+
+    .inputText::-webkit-input-placeholder::before {
+        content:"Hola";
+      }
+
+    
+    .moreFilters, .hideFilters{
+        gap: 1rem;
+    }
+
+    .moreFilters::before, .hideFilters:nth-child(1)::before{
+        left: 44%;
+    }
+
+    .labelCheck::after{
+        content: 'Full Time Only';
+        left: 9rem;
+    }
+
+    .labelCheck{
+        border-left: 0rem;
+    }
+
+    .container2{
+        width: 50%;
+    }
+
+    .location{
+        width: 45%;
+        border-right: 0.1rem solid rgba(110, 128, 152, 0.2);
+    }
+
+    .container2{
+        width: 55%;
+    }
+
+    .inputText:hover, .location:hover, .checkbox:hover{
+        cursor: pointer;
+    }
+}

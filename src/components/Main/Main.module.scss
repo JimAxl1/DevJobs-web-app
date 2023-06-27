@@ -1,0 +1,11 @@
+.main{
+    min-height: 100vh;
+    &.light{
+        background-color: #F4F6F8;
+        
+    }
+    &.dark{
+        background-color: #121721;
+    }
+}
+

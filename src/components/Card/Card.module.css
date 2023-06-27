@@ -1,0 +1,110 @@
+.card {
+  border-radius: 6px;
+  margin: 0px 24px;
+  padding: 50px 20px 36px 32px;
+}
+
+.card.light {
+  background-color: #FFFFFF;
+}
+
+.card.dark {
+  background-color: #19202d;
+}
+
+.text1 {
+  font-family: Kumbh Sans;
+  color: #6E8098;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+}
+
+.position {
+  font-family: Kumbh Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 15px 0px;
+}
+
+.position.light {
+  color: #19202D;
+}
+
+.position.dark {
+  color: #FFFFFF;
+}
+
+.location {
+  font-family: Kumbh Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #5964E0;
+  margin-top: 45px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.containerimg {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  top: 25px;
+  left: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .containerCard {
+    width: 47.5%;
+  }
+  .card {
+    width: 100%;
+    margin: 0px;
+  }
+  .containerimg {
+    top: 25px;
+    left: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .containerCard {
+    width: 32%;
+  }
+  .containerCard:hover {
+    cursor: pointer;
+  }
+  .position:hover {
+    color: #6E8098;
+  }
+}
+/*# sourceMappingURL=Card.module.css.map */

@@ -1,0 +1,12 @@
+.main {
+  min-height: 100vh;
+}
+
+.main.light {
+  background-color: #F4F6F8;
+}
+
+.main.dark {
+  background-color: #121721;
+}
+/*# sourceMappingURL=Main.module.css.map */

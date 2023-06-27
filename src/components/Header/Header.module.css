@@ -1,0 +1,129 @@
+.header {
+  background-image: url("../../assets/mobile/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 136px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-family: Kumbh Sans;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  right: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #5964E0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FFFFFF;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #FFFFFF;
+          box-shadow: 0 0 1px #FFFFFF;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch::before {
+  content: url("../../assets/desktop/icon-sun.svg");
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 2px;
+}
+
+.switch::after {
+  content: url("../../assets/desktop/icon-moon.svg");
+  display: block;
+  position: absolute;
+  left: 60px;
+  top: 2.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url("../../assets/tablet/bg-pattern-header.svg");
+  }
+  .light {
+    background-color: #F4F6F8;
+  }
+  .dark {
+    background-color: #121721;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    background-image: url("../../assets/desktop/bg-pattern-header.svg");
+  }
+  .title:hover {
+    cursor: pointer;
+  }
+  .slider.round:hover:before {
+    background-color: #939BF4;
+  }
+}
+/*# sourceMappingURL=Header.module.css.map */

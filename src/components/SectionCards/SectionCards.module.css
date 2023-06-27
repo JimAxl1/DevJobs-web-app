@@ -1,0 +1,51 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+  top: -75px;
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-family: Kumbh Sans;
+  font-weight: 700;
+  margin-top: 70px;
+}
+
+.text.dark {
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: -100px;
+    margin: 70px 24px;
+    gap: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1110px;
+    margin: auto;
+    top: -40px;
+  }
+}
+/*# sourceMappingURL=SectionCards.module.css.map */
